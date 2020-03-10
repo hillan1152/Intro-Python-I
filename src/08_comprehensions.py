@@ -38,5 +38,5 @@ x = input("Enter comma-separated numbers: ").split(",")
 # NOTHING IS WORKING I ALWAYS GET THE ERROR "invalid literal for int() with base 10:"
 
 # y = [num for num in x if int(num) % 2 == 0]
-y = [letter for letter in range(30) if int(x) % 2 == 0]
+y = [letter for letter in x if int(x) % 2 == 0]
 print(y)
