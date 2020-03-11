@@ -32,3 +32,4 @@ with open("bar.txt") as bar:
     read_data = bar.read()
     print(read_data)
     bar.close()
+    print(bar.closed)
