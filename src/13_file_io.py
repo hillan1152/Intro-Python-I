@@ -10,7 +10,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
-with open("./src/foo.txt") as f:
+with open("foo.txt") as f:
     readit = f.read()
     f.close()
 print(readit)
@@ -22,9 +22,13 @@ print(f.closed)
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-with open("./src/bar.txt", "w+") as bar:
-    L = ["the cow /n", "jumped over /n", "the moon /n"]
-    bar.writelines(L)
+bar = open("bar.txt", "w+")
+bar.write("This is a line \n")
+bar.write("This is a second line \n")
+bar.write("This is a third line ")
+bar.close()
+
+with open("bar.txt") as bar:
+    read_data = bar.read()
+    print(read_data)
     bar.close()
-print(bar.readlines())
-print(bar.closed)
